@@ -1,4 +1,4 @@
-# Employee Pulse Application (Proof of Concept)
+# Employee Pulse Application
 
 A simple web application allowing employees to submit weekly pulse surveys and admins to view and export submissions.
 
