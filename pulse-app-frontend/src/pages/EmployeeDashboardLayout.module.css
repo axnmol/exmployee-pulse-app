@@ -1,0 +1,54 @@
+/* src/pages/EmployeeDashboardLayout.module.css */
+
+.navTabs {
+  display: inline-flex; /* Use inline-flex to wrap content width */
+  gap: 8px; /* Space between buttons */
+  margin-top: 5px; /* Adjust spacing */
+  /* Optional: Add a subtle background to the group itself */
+  /* background-color: #f9f9f9; */
+  /* padding: 4px; */
+  /* border-radius: 8px; */
+}
+
+.navLink {
+  padding: 8px 16px;
+  /* Give inactive tabs a very light background */
+  background-color: #fdfdfd; 
+  border: 1px solid #eee; 
+  border-radius: 6px;
+  color: #555; /* Muted color for inactive text */
+  text-decoration: none; /* Ensure no underline by default */
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: nowrap; /* Prevent wrapping */
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+/* Increase specificity for inactive hover state */
+.navTabs .navLink:hover {
+  /* Darker background and border on hover */
+  background-color: #f5f5f5; /* Keep hover slightly darker */
+  border-color: #ddd; 
+  color: #333;
+  text-decoration: none; /* Explicitly remove underline on hover */
+}
+
+/* Increase specificity by including parent context */
+.navTabs .activeLink {
+  /* Active state: Blue background, white text */
+  background-color: #007bff; /* Primary blue */
+  color: #fff !important; /* White text - Add !important as a safeguard if needed, but specificity should be enough */
+  border-color: #007bff; /* Match border color or make slightly darker */
+  text-decoration: none; /* Ensure no underline when active */
+}
+
+/* Active link hover styles remain specific */
+.navTabs .activeLink:hover {
+   /* Darker blue background on hover */
+   background-color: #0056b3; 
+   border-color: #0056b3;
+   color: #fff; /* Keep text white */
+   text-decoration: none; /* Ensure no underline on active hover */
+} 

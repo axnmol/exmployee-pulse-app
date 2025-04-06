@@ -1,0 +1,113 @@
+/* General App Styles */
+
+/* --- Remove Custom Font Definition --- */
+/* @font-face { ... } */
+/* --- End Custom Font Definition --- */
+
+body {
+  margin: 0;
+  /* Revert to default system/browser fonts */
+  /* font-family: 'Indie Flower', cursive; */
+  /* font-weight: 400; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; /* Restore common system font stack */
+  font-weight: normal; /* Explicitly set to normal */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333; /* Default text color to DARK for light theme */
+  line-height: 1.6;
+
+  /* Keep Animated Gradient Background */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+
+  /* --- Add Flexbox for Centering --- */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Vertically center the content (.App) */
+  align-items: center; /* Horizontally center flex items */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  /* Corrected: Use max-width and percentage width */
+  max-width: 1200px; /* Maximum width */
+  width: 100%; /* Use 90% of viewport width up to the max-width */
+  margin: 20px auto; 
+  padding: 30px;    
+  box-sizing: border-box;
+  
+  /* Frosted Glass / Blur Effect - LIGHT VERSION */
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 16px; 
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* Change text color to white */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Adjust shadow slightly for white text */
+    font-size: 3.2em; 
+    font-weight: bold; 
+    /* Remove white-space: nowrap to allow wrapping */
+    /* white-space: nowrap; */ 
+}
+
+/* Remove default Vite/Create React App logo styles if they exist */
+/* For example: */
+/* 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+*/

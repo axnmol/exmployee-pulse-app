@@ -1,0 +1,8 @@
+/* src/components/SurveyForm.module.css */
+
+.formContainer {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-top: 20px;
+} 
